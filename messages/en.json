@@ -1,0 +1,612 @@
+{
+  "common": {
+    "learnMore": "Learn More",
+    "donate": "Donate",
+    "donateNow": "Donate Now",
+    "donateToday": "Donate Today",
+    "contact": "Contact Us",
+    "volunteer": "Volunteer",
+    "volunteerWithUs": "Volunteer With Us",
+    "sendMessage": "Send Message",
+    "submitApplication": "Submit Application",
+    "viewAllPrograms": "View All Programs",
+    "loadMore": "Load More Moments",
+    "registerNow": "Register Now",
+    "startPlanning": "Start Planning",
+    "learnMoreAboutUs": "Learn More About Us",
+    "viewOpenPositions": "View Open Positions",
+    "sendUsMessage": "Send Us a Message",
+    "contactPartnershipTeam": "Contact Partnership Team",
+    "enrollYourChild": "Enroll Your Child",
+    "downloadBrochure": "Download Brochure",
+    "becomeVolunteer": "Become a Volunteer",
+    "makeADonation": "Make a Donation",
+    "setUpMonthly": "Set Up Monthly"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "programs": "Programs",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "donate": "Donate",
+    "getInvolved": "Get Involved"
+  },
+  "brand": {
+    "name": "Myside Community",
+    "fullName": "Myside Community Charity Organization",
+    "tagline": "Building Hope for Every Child"
+  },
+  "hero": {
+    "title": "Building Hope for Every Child",
+    "subtitle": "Supporting children and youth with special needs in Ethiopia. Together, we create an inclusive community where every child can thrive and reach their full potential.",
+    "ctaPrimary": "Make a Donation",
+    "ctaSecondary": "Our Programs"
+  },
+  "about": {
+    "title": "Empowering Special Needs Children in Ethiopia",
+    "description": "Myside Community Charity Organization is dedicated to supporting children and youth with special needs including Autism, Down Syndrome, ADHD, and Cerebral Palsy. We believe every child deserves love, support, and the opportunity to reach their full potential.",
+    "comprehensiveApproach": "Our comprehensive approach includes educational programs, vocational training, family support services, community awareness initiatives, and therapeutic interventions that make a real difference in the lives of children and their families.",
+    "floatingCard": {
+      "title": "Making a Difference",
+      "subtitle": "Every Day, Every Child"
+    },
+    "stats": {
+      "childrenSupported": "Children Supported",
+      "familiesHelped": "Families Helped",
+      "corePrograms": "Core Programs",
+      "yearsOfService": "Years of Service"
+    }
+  },
+  "aboutPage": {
+    "title": "About Myside Community",
+    "subtitle": "Empowering children and youth with special needs in Ethiopia through compassionate care, innovative programs, and community support since 2018.",
+    "mission": {
+      "title": "Mission",
+      "description": "The main mission of Myside Special Needs Children/Community Charity Organization is to establish and operate a fully equipped educational and vocational training center. This center provides individualized academic programs, therapeutic support (such as speech therapy), and vocational skills development."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "A society where every child with special needs has equal opportunities to thrive, learn, and contribute to their community, supported by understanding families and an inclusive society."
+    },
+    "coreValues": {
+      "title": "Core Values",
+      "values": {
+        "compassion": "Compassion and empathy in all interactions",
+        "inclusion": "Inclusion and acceptance of all abilities",
+        "innovation": "Innovation in therapeutic approaches",
+        "integrity": "Integrity and transparency"
+      }
+    },
+    "journey": {
+      "title": "Our Journey",
+      "subtitle": "From humble beginnings to leading organization",
+      "timeline": {
+        "2018": {
+          "title": "Foundation",
+          "description": "Myside Community was founded by a group of passionate educators in Addis Ababa."
+        },
+        "2019": {
+          "title": "First Programs",
+          "description": "Launched our first educational support programs for children with autism."
+        },
+        "2021": {
+          "title": "Family Support",
+          "description": "Introduced comprehensive family support and parent training workshops."
+        },
+        "2024": {
+          "title": "Expansion",
+          "description": "Opened new centers in three additional cities, serving over 500 children."
+        }
+      }
+    },
+    "team": {
+      "title": "Meet Our Board Members",
+      "joinTeam": {
+        "title": "Join Our Team",
+        "description": "We're always looking for passionate professionals who share our commitment to supporting children with special needs."
+      }
+    },
+    "documents": {
+      "title": "Organization Documents",
+      "subtitle": "View our official certifications and documentation"
+    }
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "We offer comprehensive programs designed to support children with special needs, their families, and the broader community through education, therapy, vocational training, and advocacy.",
+    "educational": {
+      "title": "Educational Support",
+      "description": "Specialized learning programs with individualized academic programs tailored for children with autism, ADHD, and other learning differences."
+    },
+    "therapeutic": {
+      "title": "Therapeutic Services",
+      "description": "Comprehensive therapy programs including speech therapy, occupational, and behavioral therapy to enhance development."
+    },
+    "family": {
+      "title": "Family Support",
+      "description": "Counseling, training, and support groups for families, especially for mothers and parents navigating special needs care."
+    },
+    "vocational": {
+      "title": "Vocational Training",
+      "description": "Vocational skills development to equip youth with special needs for fulfilling and productive lives."
+    },
+    "community": {
+      "title": "Community Outreach",
+      "description": "Awareness programs and job creation initiatives to build understanding and acceptance of special needs in the community."
+    }
+  },
+  "programsPage": {
+    "title": "Empowering Every Child's Potential",
+    "subtitle": "Our comprehensive programs support children with Autism, Down Syndrome, ADHD, and Cerebral Palsy through specialized education, therapy, vocational training, and family support services.",
+    "programsTitle": "Our Programs",
+    "programsSubtitle": "Comprehensive support services designed to help children with special needs reach their full potential and thrive in their communities.",
+    "offerings": {
+      "educational": {
+        "title": "Educational Support Program",
+        "description": "Specialized learning support with individualized academic programs tailored to each child's unique needs and abilities, focusing on inclusive education.",
+        "tags": {
+          "ongoing": "Ongoing",
+          "ages": "Ages 6-18"
+        },
+        "features": {
+          "iep": "Individualized Education Plans (IEP)",
+          "smallClass": "Small class sizes for better attention",
+          "curriculum": "Specialized curriculum adaptation"
+        }
+      },
+      "therapeutic": {
+        "title": "Therapeutic Services",
+        "description": "Comprehensive therapy programs including speech therapy, occupational, and behavioral therapy to enhance development.",
+        "tags": {
+          "ages": "Ages 2-21",
+          "flexible": "Flexible"
+        },
+        "features": {
+          "speech": "Speech and language therapy",
+          "occupational": "Occupational therapy sessions",
+          "behavioral": "Behavioral intervention plans"
+        }
+      },
+      "family": {
+        "title": "Family Support Services",
+        "description": "Empowering families with resources, training, and emotional support, including counseling especially for mothers and parents navigating the journey of raising a special needs child.",
+        "tags": {
+          "allFamilies": "All families",
+          "ongoing": "Ongoing"
+        },
+        "features": {
+          "training": "Parent training workshops",
+          "counseling": "Professional counseling services",
+          "support": "Peer support groups"
+        }
+      },
+      "vocational": {
+        "title": "Vocational Training",
+        "description": "Vocational skills development to equip youth with special needs for fulfilling and productive lives.",
+        "tags": {
+          "ages": "Ages 12-21",
+          "skillsBased": "Skills-based"
+        },
+        "features": {
+          "skills": "Skills training programs",
+          "placement": "Job placement support",
+          "independence": "Independence-building workshops"
+        }
+      }
+    },
+    "programFeatures": "Program Features:",
+    "facilities": {
+      "title": "Our Facilities in Action",
+      "subtitle": "Take a look at our safe, inclusive, and engaging environments where children explore, learn, and grow together through our various programs.",
+      "creativeArts": {
+        "title": "Creative Arts Therapy",
+        "subtitle": "Expression through color and creativity"
+      },
+      "inclusiveClassrooms": {
+        "title": "Inclusive Classrooms",
+        "subtitle": "Collaborative learning environments"
+      },
+      "sensoryRooms": "Sensory Rooms",
+      "safePlaygrounds": "Safe Playgrounds"
+    },
+    "impact": {
+      "title": "Program Impact",
+      "subtitle": "Our programs have made a significant difference in the lives of children and families across Ethiopia.",
+      "stats": {
+        "childrenServed": "Children Served",
+        "improvementRate": "Improvement Rate",
+        "familiesSupported": "Families Supported",
+        "professionalStaff": "Professional Staff"
+      },
+      "successStories": {
+        "title": "Success Stories",
+        "story1": {
+          "quote": "Thanks to the early intervention program, my son with autism has made incredible progress. He's now communicating better and has made friends at school.",
+          "author": "Meron, Parent"
+        },
+        "story2": {
+          "quote": "The vocational training program helped my daughter find meaningful employment. She's now independent and confident in her abilities.",
+          "author": "Tadesse, Parent"
+        }
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Voices of Our Community",
+    "subtitle": "Hear from the families and individuals whose lives have been transformed by your support."
+  },
+  "impact": {
+    "title": "Our Impact",
+    "subtitle": "Through dedication and community support, we've made a meaningful difference in the lives of children with special needs and their families across Ethiopia.",
+    "stats": {
+      "childrenSupported": {
+        "label": "Children Supported",
+        "sub": "Children with special needs receiving our services"
+      },
+      "familiesHelped": {
+        "label": "Families Helped",
+        "sub": "Families receiving support and guidance"
+      },
+      "corePrograms": {
+        "label": "Core Programs",
+        "sub": "Comprehensive programs running simultaneously"
+      },
+      "successRate": {
+        "label": "Success Rate",
+        "sub": "Children showing significant improvement"
+      }
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "subtitle": "Your support helps us continue providing essential services to children with special needs. Every contribution, no matter the size, creates lasting impact."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We'd love to hear from you. Reach out to learn more about our programs or how you can get involved.",
+    "pageSubtitle": "We're here to help and answer any questions you might have. Reach out to us and we'll respond as soon as we can.",
+    "visitUs": "Visit Us",
+    "callUs": "Call Us",
+    "emailUs": "Email Us",
+    "officeHours": "Office Hours",
+    "getInTouch": "Get in Touch",
+    "findUs": "Find Us",
+    "form": {
+      "title": "Send Us a Message",
+      "subtitle": "Fill out the form below and we'll get back to you within 24 hours.",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "required": "*",
+      "sendButton": "Send Message"
+    },
+    "hours": {
+      "weekdays": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    }
+  },
+  "donate": {
+    "title": "Support Our Mission",
+    "subtitle": "Your generous donation helps us provide educational and therapeutic support to children with special needs. Together, we can make a lasting difference.",
+    "howToDonate": {
+      "title": "How to Donate",
+      "subtitle": "We appreciate your willingness to support Myside Community Charity Organization. You can donate via bank transfer or contact us directly to arrange your donation."
+    },
+    "bankTransfer": {
+      "title": "Bank Transfer Details",
+      "bankName": "Bank Name:",
+      "accountName": "Account Name:",
+      "accountNumber": "Account Number:",
+      "note": "Please contact us for the complete account details before making a transfer"
+    },
+    "contactToDonate": {
+      "title": "Contact Us to Donate",
+      "phone": "Phone",
+      "email": "Email",
+      "visitOffice": "Visit Our Office",
+      "contactForDirections": "Contact us for directions"
+    },
+    "whatSupports": {
+      "title": "What Your Donation Supports",
+      "educational": {
+        "title": "Educational Programs",
+        "description": "Specialized learning programs with individualized academic programs tailored for children with autism, ADHD, and other learning differences."
+      },
+      "therapeutic": {
+        "title": "Therapeutic Services",
+        "description": "Comprehensive therapy programs including speech therapy, occupational, and behavioral therapy to enhance development."
+      },
+      "family": {
+        "title": "Family Support",
+        "description": "Counseling, training, and support groups for families, especially for mothers and parents navigating special needs care."
+      },
+      "vocational": {
+        "title": "Vocational Training",
+        "description": "Vocational skills development to equip youth with special needs for fulfilling and productive lives."
+      }
+    },
+    "impactNumbers": {
+      "directImpact": {
+        "title": "Direct Impact",
+        "subtitle": "Of donations go directly to programs"
+      },
+      "yearsOfService": {
+        "title": "Years of Service",
+        "subtitle": "Supporting our community since 2018"
+      },
+      "corePrograms": {
+        "title": "Core Programs",
+        "subtitle": "Serving children and families"
+      }
+    }
+  },
+  "getInvolved": {
+    "title": "Get Involved",
+    "subtitle": "Join our mission to support children with special needs. There are many ways to make a difference in our community.",
+    "volunteer": {
+      "title": "Volunteer Opportunities",
+      "subtitle": "Make a direct impact in the lives of children with special needs. Choose from various volunteer roles that match your skills and interests.",
+      "roles": {
+        "educational": {
+          "title": "Educational Support",
+          "description": "Help children with learning activities and homework assistance",
+          "time": "2-4 hours/week"
+        },
+        "therapy": {
+          "title": "Therapy Assistant",
+          "description": "Support therapists during sessions and help with equipment",
+          "time": "3-6 hours/week"
+        },
+        "events": {
+          "title": "Event Coordination",
+          "description": "Help organize fundraising events and community activities",
+          "time": "Flexible"
+        },
+        "admin": {
+          "title": "Administrative Support",
+          "description": "Assist with office tasks, data entry, and communication",
+          "time": "2-3 hours/week"
+        }
+      },
+      "application": {
+        "title": "Volunteer Application",
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "areaOfInterest": "Area of Interest",
+        "selectInterest": "Select your interest",
+        "availability": "Availability",
+        "selectAvailability": "Select your availability",
+        "availabilityOptions": {
+          "weekdaysMorning": "Weekdays (Morning)",
+          "weekdaysAfternoon": "Weekdays (Afternoon)",
+          "weekends": "Weekends",
+          "flexible": "Flexible"
+        },
+        "experience": "Relevant Experience",
+        "experiencePlaceholder": "Describe any relevant experience working with children or special needs...",
+        "motivation": "Why do you want to volunteer?",
+        "motivationPlaceholder": "Tell us about your motivation to volunteer with us...",
+        "characters": "characters"
+      }
+    },
+    "donation": {
+      "title": "Make a Donation",
+      "subtitle": "Your generous donations help us provide essential services and support to children with special needs and their families.",
+      "amounts": {
+        "25": {
+          "amount": "$25",
+          "description": "Provides educational materials for one child for a month"
+        },
+        "50": {
+          "amount": "$50",
+          "description": "Covers one therapy session for a child in need"
+        },
+        "100": {
+          "amount": "$100",
+          "description": "Supports a family with transportation for a month"
+        },
+        "250": {
+          "amount": "$250",
+          "description": "Funds specialized equipment for therapy sessions"
+        }
+      },
+      "types": {
+        "oneTime": {
+          "title": "One-time Donation",
+          "description": "Make a single donation to support our immediate needs"
+        },
+        "monthly": {
+          "title": "Monthly Giving",
+          "description": "Become a monthly donor for sustained impact"
+        },
+        "corporate": {
+          "title": "Corporate Sponsorship",
+          "description": "Partner with us for larger community impact"
+        },
+        "inKind": {
+          "title": "In-Kind Donations",
+          "description": "Donate equipment, supplies, or services"
+        }
+      },
+      "whyMatters": {
+        "title": "Why Your Donation Matters",
+        "directImpact": {
+          "title": "Direct Impact",
+          "description": "100% of donations go directly to programs and services"
+        },
+        "transparency": {
+          "title": "Transparency",
+          "description": "Regular reports on how your donations are used"
+        },
+        "lastingChange": {
+          "title": "Lasting Change",
+          "description": "Supporting long-term development and independence"
+        }
+      }
+    },
+    "partnership": {
+      "title": "Partnership Opportunities",
+      "subtitle": "Join us in creating a more inclusive community. We welcome partnerships with organizations that share our commitment to supporting special needs children.",
+      "corporate": {
+        "title": "Corporate Partners",
+        "description": "Businesses that provide financial support, employee volunteers, or in-kind donations.",
+        "benefits": {
+          "title": "Partnership Benefits:",
+          "csr": "Corporate social responsibility recognition",
+          "volunteer": "Employee volunteer opportunities",
+          "tax": "Tax benefits and community impact"
+        }
+      },
+      "healthcare": {
+        "title": "Healthcare Partners",
+        "description": "Medical professionals and healthcare institutions providing specialized services.",
+        "benefits": {
+          "development": "Professional development opportunities",
+          "research": "Research collaboration",
+          "recognition": "Community service recognition"
+        }
+      },
+      "educational": {
+        "title": "Educational Partners",
+        "description": "Schools, universities, and educational institutions supporting our programs.",
+        "benefits": {
+          "internship": "Student internship programs",
+          "research": "Research opportunities",
+          "engagement": "Community engagement"
+        }
+      },
+      "government": {
+        "title": "Government Partners",
+        "description": "Local and national government agencies supporting policy and funding.",
+        "benefits": {
+          "policy": "Policy development collaboration",
+          "funding": "Funding opportunities",
+          "scaling": "Community impact scaling"
+        }
+      },
+      "currentPartners": {
+        "title": "Our Current Partners",
+        "subtitle": "We're proud to work with these organizations to expand our reach and impact:",
+        "partners": {
+          "ministry": "Ethiopian Ministry of Health",
+          "university": "Addis Ababa University",
+          "clinics": "Local Healthcare Clinics",
+          "ngos": "International NGOs",
+          "community": "Community Organizations",
+          "corporate": "Corporate Sponsors"
+        }
+      },
+      "becomePartner": {
+        "title": "Become a Partner",
+        "description": "Ready to make a difference? Let's discuss how we can work together to support children with special needs in Ethiopia."
+      }
+    },
+    "events": {
+      "title": "Events & Activities",
+      "subtitle": "Join our community events to support our mission, raise awareness, and connect with families and supporters.",
+      "upcoming": "Upcoming Events",
+      "grandLaunch": {
+        "title": "Grand Launch Event",
+        "date": "January 11, 2026",
+        "time": "10:00 AM - 4:00 PM",
+        "location": "Myside Community Center",
+        "description": "Join us for the official launch of our new website and community center expansion."
+      },
+      "gala": {
+        "title": "Annual Fundraising Gala",
+        "date": "March 15, 2026",
+        "time": "6:00 PM - 10:00 PM",
+        "location": "Sheraton Addis Hotel",
+        "description": "Join us for an evening of celebration, awareness, and fundraising for our programs."
+      },
+      "autismDay": {
+        "title": "World Autism Awareness Day",
+        "date": "April 2, 2026",
+        "time": "8:00 AM - 12:00 PM",
+        "location": "Meskel Square",
+        "description": "Walk with us to raise awareness about special needs inclusion in our community."
+      },
+      "pastEvents": {
+        "title": "Past Events Impact",
+        "events": {
+          "autism": {
+            "name": "World Autism Awareness Day",
+            "date": "April 2, 2023",
+            "impact": "Reached 500+ community members"
+          },
+          "olympics": {
+            "name": "Special Olympics Ethiopia",
+            "date": "June 15, 2023",
+            "impact": "25 children participated"
+          },
+          "conference": {
+            "name": "Parent Support Conference",
+            "date": "September 10, 2023",
+            "impact": "100+ families attended"
+          }
+        }
+      },
+      "hostEvent": {
+        "title": "Host Your Own Event",
+        "description": "Organize a fundraising event in your community to support our mission. We'll provide you with all the resources and support you need.",
+        "benefits": {
+          "toolkit": "Event planning toolkit",
+          "marketing": "Marketing materials",
+          "support": "Dedicated support team"
+        }
+      }
+    }
+  },
+  "gallery": {
+    "title": "Our Gallery",
+    "subtitle": "A visual journey through the moments that define our community. See the smiles, the progress, and the hope we build together.",
+    "categories": {
+      "all": "All"
+    },
+    "noImages": "No images found for this category."
+  },
+  "footer": {
+    "description": "Supporting children and youth with special needs in Ethiopia. Together, we build a more inclusive and compassionate community for all.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "copyright": "© 2025 Myside Community Charity Organization. All rights reserved.",
+    "madeWith": "Made with Readdy"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back to Home"
+  },
+  "metadata": {
+    "title": "Myside Community - Hope for Every Child",
+    "description": "Supporting children and youth with special needs in Ethiopia",
+    "about": {
+      "title": "About Us - Myside Community",
+      "description": "Learn about our mission, vision, and the team behind Myside Community Charity Organization."
+    },
+    "programs": {
+      "title": "Our Programs - Myside Community",
+      "description": "Discover our comprehensive programs supporting children with special needs through education, therapy, and family support."
+    },
+    "gallery": {
+      "title": "Gallery - Myside Community",
+      "description": "View photos and moments from our community activities and programs."
+    },
+    "contact": {
+      "title": "Contact Us - Myside Community",
+      "description": "Get in touch with Myside Community. We're here to help and answer your questions."
+    },
+    "donate": {
+      "title": "Donate - Myside Community",
+      "description": "Support our mission by making a donation. Your contribution helps children with special needs in Ethiopia."
+    },
+    "getInvolved": {
+      "title": "Get Involved - Myside Community",
+      "description": "Join our mission through volunteering, donations, or partnerships. Make a difference in children's lives."
+    }
+  }
+}
