@@ -169,14 +169,14 @@ export const pageMetadataConfig: Record<string, Omit<PageMetadataOptions, 'local
     description: 'Get in touch with Myside Community. We\'d love to hear from you and answer any questions.',
     keywords: ['contact', 'reach us', 'location', 'email'],
   },
-  donate: {
-    title: 'Donate',
-    description: 'Support Myside Community\'s mission by making a donation. Every contribution helps children with special needs.',
-    keywords: ['donate', 'support', 'contribution', 'help'],
-  },
   'get-involved': {
     title: 'Get Involved',
     description: 'Join Myside Community as a volunteer or partner. Make a difference in the lives of special needs children.',
     keywords: ['volunteer', 'partner', 'get involved', 'join'],
+  },
+  donate: {
+    title: 'Support Our Mission',
+    description: 'Support Myside Community through bank transfer donations. Your contribution helps children with special needs.',
+    keywords: ['donate', 'support', 'bank transfer', 'contribution'],
   },
 };

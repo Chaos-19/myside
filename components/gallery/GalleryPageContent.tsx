@@ -1,35 +1,57 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Image as ImageIcon, X } from 'lucide-react';
 import { PageHero } from '@/components/shared';
-import { galleryImages } from '@/data/galleryData';
+import { galleryImages as staticGalleryImages } from '@/data/galleryData';
+
+interface GalleryImage {
+  id: string;
+  src: string;
+  alt: string;
+  category?: string;
+  caption?: string;
+}
 
 export default function GalleryPageContent() {
   const t = useTranslations('gallery');
   const [filter, setFilter] = useState('All');
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [dashboardImages, setDashboardImages] = useState<GalleryImage[]>([]);
+
+  // Load dashboard images from localStorage
+  useEffect(() => {
+    const stored = localStorage.getItem('dashboard_gallery');
+    if (stored) {
+      setDashboardImages(JSON.parse(stored));
+    }
+  }, []);
+
+  // Combine static and dashboard images
+  const allImages = useMemo(() => {
+    return [...staticGalleryImages, ...dashboardImages];
+  }, [dashboardImages]);
 
   // Extract unique categories from gallery data
   const categories = useMemo(() => {
     const uniqueCategories = new Set<string>();
-    galleryImages.forEach(img => {
+    allImages.forEach(img => {
       if (img.category) {
         uniqueCategories.add(img.category);
       }
     });
     return ['All', ...Array.from(uniqueCategories).sort()];
-  }, []);
+  }, [allImages]);
 
   // Filter images based on selected category
   const filteredImages = useMemo(() => {
     if (filter === 'All') {
-      return galleryImages;
+      return allImages;
     }
-    return galleryImages.filter(img => img.category === filter);
-  }, [filter]);
+    return allImages.filter(img => img.category === filter);
+  }, [filter, allImages]);
 
   // Get translated category name
   const getCategoryLabel = (category: string) => {

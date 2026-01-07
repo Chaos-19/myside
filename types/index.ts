@@ -20,6 +20,8 @@ export interface BoardMember {
   photo: string;
   bio?: string;
   order: number;
+  title?: string;   // Professional designation (e.g., "Dr.", "Prof.")
+  degree?: string;  // Educational credentials (e.g., "PhD in Medicine")
 }
 
 // Gallery Types
@@ -82,4 +84,16 @@ export interface UpcomingEvent {
   title: string;
   date: string;
   description: string;
+}
+
+export interface Event {
+  id: string;
+  title: string;
+  titleAm?: string;
+  date: string;
+  description: string;
+  descriptionAm?: string;
+  image?: string;
+  category?: 'past' | 'upcoming';
+  location?: string;
 }

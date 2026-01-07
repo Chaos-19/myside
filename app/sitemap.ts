@@ -10,8 +10,8 @@ const routes = [
   '/programs',
   '/gallery',
   '/contact',
-  '/donate',
   '/get-involved',
+  '/donate',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

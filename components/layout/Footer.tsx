@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Heart, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { socialLinks, contactInfo } from '@/data';
 
 export default function Footer() {
   const t = useTranslations();
@@ -18,14 +19,13 @@ export default function Footer() {
     { label: t('nav.gallery'), href: `/${locale}/gallery` },
     { label: t('nav.getInvolved'), href: `/${locale}/get-involved` },
     { label: t('nav.contact'), href: `/${locale}/contact` },
-    { label: t('nav.donate'), href: `/${locale}/donate` },
   ];
 
   const socialIcons = [
-    { Icon: Facebook, href: '#' },
-    { Icon: Twitter, href: '#' },
-    { Icon: Instagram, href: '#' },
-    { Icon: Linkedin, href: '#' },
+    { Icon: Facebook, href: socialLinks.facebook, label: 'Facebook' },
+    { Icon: Twitter, href: socialLinks.twitter, label: 'Twitter' },
+    { Icon: Instagram, href: socialLinks.instagram, label: 'Instagram' },
+    { Icon: Linkedin, href: socialLinks.linkedin, label: 'LinkedIn' },
   ];
 
   return (
@@ -47,12 +47,14 @@ export default function Footer() {
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              {socialIcons.map(({ Icon, href }, i) => (
+              {socialIcons.map(({ Icon, href, label }) => (
                 <a
-                  key={i}
+                  key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-brand-teal text-white p-2 rounded-full transition-colors"
-                  aria-label={`Social link ${i + 1}`}
+                  aria-label={label}
                 >
                   <Icon size={16} />
                 </a>

@@ -17,28 +17,30 @@ export default function Programs() {
       titleKey: 'educational.title',
       descKey: 'educational.description',
       icon: BookOpen,
-      img: '/assets/image/photo_8_2025-11-01_10-44-47.jpg',
+      //img: '/assets/image/photo_8_2025-11-01_10-44-47.jpg',
+      img: '/assets/image/photo_21_2025-11-01_10-44-47.jpg',
+      //public/assets/image/photo_21_2025-11-01_10-44-47.jpg
       color: 'bg-emerald-100 text-emerald-600'
     },
     {
       titleKey: 'therapeutic.title',
       descKey: 'therapeutic.description',
       icon: Heart,
-      img: '/assets/image/photo_9_2025-11-01_10-44-47.jpg',
+      img: '/assets/image/photo_20_2025-11-01_10-44-47.jpg',
       color: 'bg-blue-100 text-blue-600'
     },
     {
       titleKey: 'family.title',
       descKey: 'family.description',
       icon: Users,
-      img: '/assets/image/photo_10_2025-11-01_10-44-47.jpg',
+      img: '/assets/event image/event-photo-1-2025-12-28.jpg',
       color: 'bg-purple-100 text-purple-600'
     },
     {
       titleKey: 'vocational.title',
       descKey: 'vocational.description',
       icon: Briefcase,
-      img: '/assets/image/photo_11_2025-11-01_10-44-47.jpg',
+      img: '/assets/image/photo_13_2025-11-01_10-44-47.jpg',
       color: 'bg-amber-100 text-amber-600'
     },
     {
@@ -70,7 +72,7 @@ export default function Programs() {
                     src={prog.img} 
                     alt={t(prog.titleKey)} 
                     fill
-                    className="object-cover transform hover:scale-105 transition-transform duration-500" 
+                    className="object-contain transform hover:scale-105 transition-transform duration-500" 
                   />
                 </div>
                 <div className="p-6 flex-1 flex flex-col">

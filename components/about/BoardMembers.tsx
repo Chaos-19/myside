@@ -4,19 +4,8 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { boardMembers } from '@/data/boardMembers';
+import { getInitials, formatDisplayName, shouldDisplayDegree } from '@/lib/boardMemberUtils';
 import type { BoardMember } from '@/types';
-
-/**
- * Generates initials from a name for placeholder avatars
- */
-const getInitials = (name: string): string => {
-  return name
-    .split(' ')
-    .map(part => part.charAt(0))
-    .join('')
-    .toUpperCase()
-    .slice(0, 2);
-};
 
 /**
  * Placeholder avatar component for missing photos
@@ -35,6 +24,7 @@ function PlaceholderAvatar({ name }: { name: string }) {
  */
 function BoardMemberCard({ member }: { member: BoardMember }) {
   const [imageError, setImageError] = useState(false);
+  const displayDegree = shouldDisplayDegree(member.degree);
 
   return (
     <div className="group">
@@ -51,8 +41,13 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
           />
         )}
       </div>
-      <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+      <h3 className="text-xl font-bold text-gray-900">
+        {formatDisplayName(member.name, member.title)}
+      </h3>
       <p className="text-brand-teal font-medium">{member.role}</p>
+      {displayDegree && (
+        <p className="text-gray-600 text-sm">{displayDegree}</p>
+      )}
       {member.bio && (
         <p className="text-gray-500 text-sm mt-2">{member.bio}</p>
       )}

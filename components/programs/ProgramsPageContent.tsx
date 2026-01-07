@@ -61,10 +61,10 @@ export default function ProgramsPageContent() {
   };
 
   const impactStats = [
-    { val: '500+', labelKey: 'childrenServed', icon: Users, color: 'bg-teal-500' },
+    { val: '70+', labelKey: 'childrenServed', icon: Users, color: 'bg-teal-500' },
     { val: '95%', labelKey: 'improvementRate', icon: Activity, color: 'bg-green-500' },
-    { val: '200+', labelKey: 'familiesSupported', icon: Home, color: 'bg-blue-500' },
-    { val: '50+', labelKey: 'professionalStaff', icon: UserCheck, color: 'bg-purple-500' },
+    { val: '20+', labelKey: 'familiesSupported', icon: Home, color: 'bg-blue-500' },
+    { val: '8+', labelKey: 'professionalStaff', icon: UserCheck, color: 'bg-purple-500' },
   ];
 
   return (
@@ -72,7 +72,7 @@ export default function ProgramsPageContent() {
       <PageHero 
         title={t('title')}
         subtitle={t('subtitle')}
-        bgImage="/assets/image/photo_13_2025-11-01_10-44-47.jpg"
+        bgImage="/assets/image/photo_23_2025-11-01_10-44-47.jpg"
         primaryAction={{ label: tCommon('enrollYourChild'), href: '/contact' }}
         secondaryAction={{ label: tCommon('downloadBrochure'), href: '#' }}
       />

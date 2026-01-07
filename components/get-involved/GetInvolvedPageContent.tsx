@@ -1,10 +1,12 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { 
   BookOpen, Heart, Calendar, FileText, 
-  CheckCircle, Car, Wrench, Wallet, 
-  Repeat, Building, Gift, 
+  CheckCircle, Building, 
   Landmark, GraduationCap, Stethoscope,
   Clock, MapPin, Mail, Phone
 } from 'lucide-react';
@@ -14,6 +16,11 @@ import { contactInfo } from '@/data';
 export default function GetInvolvedPageContent() {
   const t = useTranslations('getInvolved');
   const tCommon = useTranslations('common');
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'en';
+  
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const volunteerRoles = [
     { key: 'educational', icon: BookOpen },
@@ -21,22 +28,6 @@ export default function GetInvolvedPageContent() {
     { key: 'events', icon: Calendar },
     { key: 'admin', icon: FileText },
   ];
-
-  const donationAmounts = [
-    { key: '25', icon: BookOpen },
-    { key: '50', icon: Heart },
-    { key: '100', icon: Car },
-    { key: '250', icon: Wrench },
-  ];
-
-  const donationTypes = [
-    { key: 'oneTime', icon: Wallet, action: 'primary' },
-    { key: 'monthly', icon: Repeat, action: 'secondary' },
-    { key: 'corporate', icon: Building, action: 'secondary' },
-    { key: 'inKind', icon: Gift, action: 'secondary' },
-  ];
-
-  const whyMattersItems = ['directImpact', 'transparency', 'lastingChange'];
   
   const upcomingEvents = [
     { key: 'grandLaunch', img: '/assets/image/photo_24_2025-11-01_10-44-47.jpg' },
@@ -54,7 +45,6 @@ export default function GetInvolvedPageContent() {
         subtitle={t('subtitle')}
         bgImage="/assets/image/photo_22_2025-11-01_10-44-47.jpg"
         primaryAction={{ label: tCommon('becomeVolunteer'), href: '#volunteer-form' }}
-        secondaryAction={{ label: tCommon('makeADonation'), href: '#donate-section' }}
       />
 
       {/* Volunteer Opportunities */}
@@ -87,122 +77,95 @@ export default function GetInvolvedPageContent() {
             <div className="text-center mb-10">
               <h3 className="text-2xl font-bold text-brand-dark">{t('volunteer.application.title')}</h3>
             </div>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              setIsSubmitting(true);
+              
+              // Get form data
+              const formData = new FormData(e.currentTarget);
+              const application = {
+                id: `app-${Date.now()}`,
+                fullName: formData.get('fullName') as string,
+                email: formData.get('email') as string,
+                phone: formData.get('phone') as string,
+                areaOfInterest: formData.get('areaOfInterest') as string,
+                availability: formData.get('availability') as string,
+                experience: formData.get('experience') as string,
+                motivation: formData.get('motivation') as string,
+                status: 'pending',
+                submittedAt: new Date().toISOString(),
+              };
+              
+              // Save to localStorage
+              const existing = JSON.parse(localStorage.getItem('dashboard_applications') || '[]');
+              localStorage.setItem('dashboard_applications', JSON.stringify([...existing, application]));
+              
+              setTimeout(() => {
+                setIsSubmitting(false);
+                setFormSubmitted(true);
+              }, 500);
+            }}>
+              {formSubmitted ? (
+                <div className="text-center py-8">
+                  <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                  <h4 className="text-xl font-bold text-brand-dark mb-2">Application Submitted!</h4>
+                  <p className="text-gray-600">Thank you for your interest in volunteering. We will review your application and contact you soon.</p>
+                </div>
+              ) : (
+                <>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.fullName')} *</label>
-                  <input type="text" className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" />
+                  <input type="text" name="fullName" required className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.email')} *</label>
-                  <input type="email" className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" />
+                  <input type="email" name="email" required className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" />
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.phone')} *</label>
-                  <input type="tel" className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" />
+                  <input type="tel" name="phone" required className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" />
                 </div>
                 <div>
                   <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.areaOfInterest')} *</label>
-                  <select className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none">
-                    <option>{t('volunteer.application.selectInterest')}</option>
+                  <select name="areaOfInterest" required className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none">
+                    <option value="">{t('volunteer.application.selectInterest')}</option>
                     {volunteerRoles.map((role) => (
-                      <option key={role.key}>{t(`volunteer.roles.${role.key}.title`)}</option>
+                      <option key={role.key} value={role.key}>{t(`volunteer.roles.${role.key}.title`)}</option>
                     ))}
                   </select>
                 </div>
               </div>
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.availability')} *</label>
-                <select className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none">
-                  <option>{t('volunteer.application.selectAvailability')}</option>
-                  <option>{t('volunteer.application.availabilityOptions.weekdaysMorning')}</option>
-                  <option>{t('volunteer.application.availabilityOptions.weekdaysAfternoon')}</option>
-                  <option>{t('volunteer.application.availabilityOptions.weekends')}</option>
-                  <option>{t('volunteer.application.availabilityOptions.flexible')}</option>
+                <select name="availability" required className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none">
+                  <option value="">{t('volunteer.application.selectAvailability')}</option>
+                  <option value="weekdaysMorning">{t('volunteer.application.availabilityOptions.weekdaysMorning')}</option>
+                  <option value="weekdaysAfternoon">{t('volunteer.application.availabilityOptions.weekdaysAfternoon')}</option>
+                  <option value="weekends">{t('volunteer.application.availabilityOptions.weekends')}</option>
+                  <option value="flexible">{t('volunteer.application.availabilityOptions.flexible')}</option>
                 </select>
               </div>
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.experience')}</label>
-                <textarea rows={2} className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" placeholder={t('volunteer.application.experiencePlaceholder')}></textarea>
+                <textarea name="experience" rows={2} className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" placeholder={t('volunteer.application.experiencePlaceholder')}></textarea>
               </div>
               <div>
                 <label className="block text-sm font-bold text-gray-700 mb-2">{t('volunteer.application.motivation')} *</label>
-                <textarea rows={4} className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" placeholder={t('volunteer.application.motivationPlaceholder')}></textarea>
+                <textarea name="motivation" rows={4} required className="w-full p-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-teal outline-none" placeholder={t('volunteer.application.motivationPlaceholder')}></textarea>
               </div>
-              <button type="button" className="w-full bg-brand-teal hover:bg-teal-700 text-white font-bold py-4 rounded-lg transition-all shadow-md hover:shadow-lg">
-                {tCommon('submitApplication')}
+              <button type="submit" disabled={isSubmitting} className="w-full bg-brand-teal hover:bg-teal-700 text-white font-bold py-4 rounded-lg transition-all shadow-md hover:shadow-lg disabled:opacity-50">
+                {isSubmitting ? '...' : tCommon('submitApplication')}
               </button>
+                </>
+              )}
             </form>
           </div>
         </div>
       </section>
 
-      {/* Donation Section */}
-      <section id="donate-section" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-brand-dark mb-4">{t('donation.title')}</h2>
-            <p className="text-gray-600">{t('donation.subtitle')}</p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {donationAmounts.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div key={item.key} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-all border border-gray-100 text-center group">
-                  <div className="w-12 h-12 mx-auto bg-brand-light text-brand-teal rounded-full flex items-center justify-center mb-4 group-hover:bg-brand-teal group-hover:text-white transition-colors">
-                    <Icon size={20} />
-                  </div>
-                  <div className="text-2xl font-bold text-brand-dark mb-2">{t(`donation.amounts.${item.key}.amount`)}</div>
-                  <p className="text-gray-500 text-sm">{t(`donation.amounts.${item.key}.description`)}</p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-            {donationTypes.map((type) => {
-              const Icon = type.icon;
-              return (
-                <div key={type.key} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 text-center flex flex-col h-full">
-                  <div className="w-12 h-12 mx-auto bg-brand-light text-brand-teal rounded-lg flex items-center justify-center mb-4">
-                    <Icon size={24} />
-                  </div>
-                  <h3 className="font-bold text-brand-dark mb-2">{t(`donation.types.${type.key}.title`)}</h3>
-                  <p className="text-gray-500 text-sm mb-6 flex-1">{t(`donation.types.${type.key}.description`)}</p>
-                  <button className={`${type.action === 'primary' ? 'bg-brand-teal hover:bg-teal-700 text-white' : 'bg-brand-dark hover:bg-gray-700 text-white'} px-6 py-2 rounded-lg text-sm font-medium transition-colors`}>
-                    {type.key === 'oneTime' ? tCommon('donateNow') : type.key === 'monthly' ? tCommon('setUpMonthly') : tCommon('learnMore')}
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-          <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
-            <div className="flex flex-col lg:flex-row">
-              <div className="lg:w-1/2 p-10 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-brand-dark mb-6">{t('donation.whyMatters.title')}</h3>
-                <div className="space-y-6">
-                  {whyMattersItems.map((key) => (
-                    <div key={key} className="flex items-start space-x-4">
-                      <CheckCircle className="text-brand-teal shrink-0 mt-1" size={20} />
-                      <div>
-                        <h4 className="font-bold text-brand-dark">{t(`donation.whyMatters.${key}.title`)}</h4>
-                        <p className="text-gray-500 text-sm">{t(`donation.whyMatters.${key}.description`)}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-8">
-                  <button className="bg-brand-teal text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-700 transition-colors">{tCommon('donateNow')}</button>
-                </div>
-              </div>
-              <div className="lg:w-1/2 h-64 lg:h-auto relative">
-                <img src="/assets/image/photo_23_2025-11-01_10-44-47.jpg" alt="" className="absolute inset-0 w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       {/* Partnership Section */}
@@ -304,9 +267,9 @@ export default function GetInvolvedPageContent() {
                   <span>{contactInfo.email.general}</span>
                 </div>
               </div>
-              <button className="w-full bg-brand-teal hover:bg-teal-700 text-white font-bold py-3 rounded-lg transition-colors">
+              <Link href={`/${locale}/contact`} className="w-full bg-brand-teal hover:bg-teal-700 text-white font-bold py-3 rounded-lg transition-colors text-center block">
                 {tCommon('contactPartnershipTeam')}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -337,9 +300,6 @@ export default function GetInvolvedPageContent() {
                     <div className="flex items-center gap-2"><MapPin size={14} /> {t(`events.${evt.key}.location`)}</div>
                   </div>
                   <p className="text-gray-600 text-sm mb-6 flex-1">{t(`events.${evt.key}.description`)}</p>
-                  <button className="w-full bg-brand-teal hover:bg-teal-700 text-white py-2.5 rounded-lg text-sm font-medium transition-colors">
-                    {tCommon('registerNow')}
-                  </button>
                 </div>
               </div>
             ))}
@@ -372,9 +332,9 @@ export default function GetInvolvedPageContent() {
                   </li>
                 ))}
               </ul>
-              <button className="bg-white text-brand-teal font-bold py-3 px-6 rounded-lg self-start hover:bg-teal-50 transition-colors">
+              <Link href={`/${locale}/contact`} className="bg-white text-brand-teal font-bold py-3 px-6 rounded-lg self-start hover:bg-teal-50 transition-colors inline-block">
                 {tCommon('startPlanning')}
-              </button>
+              </Link>
             </div>
           </div>
         </div>

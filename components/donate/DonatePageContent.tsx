@@ -1,170 +1,161 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { Building2, Phone, Mail, MapPin, Heart, Users, BookOpen, HandHeart, Copy, CheckCircle } from 'lucide-react';
+import { Building2, Phone, Mail, MapPin, Heart, BookOpen, Stethoscope, Users, CheckCircle } from 'lucide-react';
 import { PageHero } from '@/components/shared';
-import { contactInfo, bankInfo, statistics } from '@/data';
+import { contactInfo, bankInfo } from '@/data';
 
 export default function DonatePageContent() {
   const t = useTranslations('donate');
-  const [copied, setCopied] = useState<string | null>(null);
+  const tCommon = useTranslations('common');
 
-  const copyToClipboard = (text: string, field: string) => {
-    navigator.clipboard.writeText(text);
-    setCopied(field);
-    setTimeout(() => setCopied(null), 2000);
-  };
-
-  const donationSupports = [
-    { key: 'educational', icon: BookOpen },
-    { key: 'therapeutic', icon: Heart },
-    { key: 'family', icon: Users },
-    { key: 'vocational', icon: HandHeart },
+  const donationImpact = [
+    { icon: BookOpen, title: 'Educational Programs', description: 'Support specialized learning programs for children with special needs' },
+    { icon: Stethoscope, title: 'Therapeutic Services', description: 'Fund therapy sessions including speech, occupational, and behavioral therapy' },
+    { icon: Users, title: 'Family Support', description: 'Help families with counseling, training, and support groups' },
+    { icon: Heart, title: 'Community Outreach', description: 'Enable awareness programs and community integration initiatives' },
   ];
 
   return (
     <div className="animate-fadeIn">
-      <PageHero 
+      <PageHero
         title={t('title')}
         subtitle={t('subtitle')}
-        bgImage="/assets/image/photo_21_2025-11-01_10-44-47.jpg"
+        bgImage="/assets/image/photo_20_2025-11-01_10-44-47.jpg"
       />
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             
             {/* How to Donate Section */}
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-12">
-              <div className="p-8 md:p-12">
-                <div className="text-center mb-10">
-                  <Heart className="w-16 h-16 text-brand-teal mx-auto mb-4" />
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('howToDonate.title')}</h2>
-                  <p className="text-gray-600 max-w-2xl mx-auto">
-                    {t('howToDonate.subtitle')}
-                  </p>
-                </div>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-brand-dark mb-4">{t('howToDonate.title')}</h2>
+              <p className="text-gray-600 text-lg">{t('howToDonate.subtitle')}</p>
+            </div>
 
-                {/* Bank Information */}
-                <div className="bg-brand-light rounded-2xl p-6 md:p-8 mb-8">
-                  <div className="flex items-center gap-3 mb-6">
-                    <Building2 className="w-8 h-8 text-brand-teal" />
-                    <h3 className="text-xl font-bold text-gray-900">{t('bankTransfer.title')}</h3>
-                  </div>
-                  <div className="space-y-4 text-gray-700">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                      <span className="font-semibold min-w-[140px]">{t('bankTransfer.bankName')}</span>
-                      <span>{bankInfo.bankName}</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                      <span className="font-semibold min-w-[140px]">{t('bankTransfer.accountName')}</span>
-                      <span>{bankInfo.accountName}</span>
-                    </div>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                      <span className="font-semibold min-w-[140px]">{t('bankTransfer.accountNumber')}</span>
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono bg-white px-3 py-1 rounded">{bankInfo.accountNumber}</span>
-                        <button 
-                          onClick={() => copyToClipboard(bankInfo.accountNumber, 'account')}
-                          className="p-1 hover:bg-white rounded transition-colors"
-                          title="Copy account number"
-                        >
-                          {copied === 'account' ? (
-                            <CheckCircle className="w-4 h-4 text-green-500" />
-                          ) : (
-                            <Copy className="w-4 h-4 text-gray-500" />
-                          )}
-                        </button>
-                      </div>
-                    </div>
-                    <p className="text-sm text-gray-500 mt-4 italic">
-                      * {bankInfo.note}
+            {/* Bank Transfer Details */}
+            <div className="bg-brand-light rounded-2xl p-8 md:p-10 mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-brand-teal p-3 rounded-xl text-white">
+                  <Building2 size={28} />
+                </div>
+                <h3 className="text-2xl font-bold text-brand-dark">{t('bankTransfer.title')}</h3>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 space-y-4">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                  <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.bankName')}</span>
+                  <span className="text-gray-900">{bankInfo.bankName}</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                  <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.accountName')}</span>
+                  <span className="text-gray-900">{bankInfo.accountName}</span>
+                </div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                  <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.accountNumber')}</span>
+                  <span className="text-gray-900 font-mono text-lg">{bankInfo.accountNumber}</span>
+                </div>
+                {bankInfo.note && (
+                  <div className="pt-4 mt-4 border-t border-gray-100">
+                    <p className="text-sm text-gray-500 italic">
+                      <span className="font-medium">Note:</span> {t('bankTransfer.note')}
                     </p>
                   </div>
-                </div>
+                )}
+              </div>
+            </div>
 
-                {/* Contact for Donations */}
-                <div className="border-2 border-gray-100 rounded-2xl p-6 md:p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6">{t('contactToDonate.title')}</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center shrink-0">
-                        <Phone className="w-5 h-5 text-brand-teal" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">{t('contactToDonate.phone')}</p>
-                        <p className="text-gray-600">{contactInfo.phone.primary}</p>
-                        <p className="text-gray-600">{contactInfo.phone.secondary}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center shrink-0">
-                        <Mail className="w-5 h-5 text-brand-teal" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">{t('contactToDonate.email')}</p>
-                        <p className="text-gray-600">{contactInfo.email.donations}</p>
-                        <p className="text-gray-600">{contactInfo.email.general}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4 md:col-span-2">
-                      <div className="w-12 h-12 bg-brand-light rounded-full flex items-center justify-center shrink-0">
-                        <MapPin className="w-5 h-5 text-brand-teal" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-gray-900">{t('contactToDonate.visitOffice')}</p>
-                        <p className="text-gray-600">{contactInfo.address.city}, {contactInfo.address.country}</p>
-                        <p className="text-sm text-gray-500">{t('contactToDonate.contactForDirections')}</p>
-                      </div>
-                    </div>
+            {/* Contact to Donate */}
+            <div className="bg-gray-50 rounded-2xl p-8 md:p-10 mb-16">
+              <h3 className="text-2xl font-bold text-brand-dark mb-6">{t('contactToDonate.title')}</h3>
+              <p className="text-gray-600 mb-8">
+                For more information about donating or to arrange your donation, please contact us:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a 
+                  href={`tel:${contactInfo.phone.primary}`}
+                  className="flex items-center gap-4 bg-white p-5 rounded-xl border border-gray-100 hover:border-brand-teal hover:shadow-md transition-all"
+                >
+                  <div className="bg-brand-light p-3 rounded-lg text-brand-teal">
+                    <Phone size={24} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">{t('contactToDonate.phone')}</div>
+                    <div className="font-semibold text-gray-900">{contactInfo.phone.primary}</div>
+                  </div>
+                </a>
+                
+                <a 
+                  href={`mailto:${contactInfo.email.general}`}
+                  className="flex items-center gap-4 bg-white p-5 rounded-xl border border-gray-100 hover:border-brand-teal hover:shadow-md transition-all"
+                >
+                  <div className="bg-brand-light p-3 rounded-lg text-brand-teal">
+                    <Mail size={24} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">{t('contactToDonate.email')}</div>
+                    <div className="font-semibold text-gray-900">{contactInfo.email.general}</div>
+                  </div>
+                </a>
+                
+                <div className="flex items-start gap-4 bg-white p-5 rounded-xl border border-gray-100 md:col-span-2">
+                  <div className="bg-brand-light p-3 rounded-lg text-brand-teal">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-500">{t('contactToDonate.visitOffice')}</div>
+                    <div className="font-semibold text-gray-900">{contactInfo.address.full}</div>
+                    <div className="text-sm text-gray-500 mt-1">{t('contactToDonate.contactForDirections')}</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* What Your Donation Supports */}
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-              <div className="p-8 md:p-12">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">{t('whatSupports.title')}</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {donationSupports.map((item) => {
-                    const Icon = item.icon;
-                    return (
-                      <div key={item.key} className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
-                        <div className="w-12 h-12 bg-brand-teal/10 rounded-full flex items-center justify-center shrink-0">
-                          <Icon className="w-6 h-6 text-brand-teal" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-gray-900">{t(`whatSupports.${item.key}.title`)}</h4>
-                          <p className="text-sm text-gray-600">{t(`whatSupports.${item.key}.description`)}</p>
-                        </div>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-brand-dark mb-4">{t('whatSupports.title')}</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+              {donationImpact.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index} className="bg-white border border-gray-100 rounded-xl p-6 hover:shadow-md transition-all">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-brand-light p-3 rounded-lg text-brand-teal shrink-0">
+                        <Icon size={24} />
                       </div>
-                    );
-                  })}
+                      <div>
+                        <h4 className="font-bold text-gray-900 mb-2">{t(`whatSupports.${['educational', 'therapeutic', 'family', 'vocational'][index]}.title`)}</h4>
+                        <p className="text-gray-600 text-sm">{t(`whatSupports.${['educational', 'therapeutic', 'family', 'vocational'][index]}.description`)}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Impact Numbers */}
+            <div className="bg-brand-teal rounded-2xl p-8 md:p-12 text-white text-center">
+              <h3 className="text-2xl font-bold mb-8">Your Donation Makes a Difference</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                  <div className="text-4xl font-bold mb-2">100%</div>
+                  <div className="text-teal-100">{t('impactNumbers.directImpact.subtitle')}</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold mb-2">7+</div>
+                  <div className="text-teal-100">{t('impactNumbers.yearsOfService.subtitle')}</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold mb-2">5+</div>
+                  <div className="text-teal-100">{t('impactNumbers.corePrograms.subtitle')}</div>
                 </div>
               </div>
             </div>
 
-          </div>
-
-          {/* Impact Numbers */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 text-center max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <div className="text-4xl font-bold text-brand-teal mb-2">{statistics.directImpact}</div>
-              <div className="font-bold text-gray-800">{t('impactNumbers.directImpact.title')}</div>
-              <p className="text-sm text-gray-500 mt-2">{t('impactNumbers.directImpact.subtitle')}</p>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <div className="text-4xl font-bold text-brand-teal mb-2">{statistics.yearsOfService}+</div>
-              <div className="font-bold text-gray-800">{t('impactNumbers.yearsOfService.title')}</div>
-              <p className="text-sm text-gray-500 mt-2">{t('impactNumbers.yearsOfService.subtitle')}</p>
-            </div>
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <div className="text-4xl font-bold text-brand-teal mb-2">{statistics.corePrograms}</div>
-              <div className="font-bold text-gray-800">{t('impactNumbers.corePrograms.title')}</div>
-              <p className="text-sm text-gray-500 mt-2">{t('impactNumbers.corePrograms.subtitle')}</p>
-            </div>
           </div>
         </div>
       </section>
