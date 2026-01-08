@@ -1,9 +1,10 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Heart, MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import { socialLinks, contactInfo } from '@/data';
 
 export default function Footer() {
@@ -36,12 +37,15 @@ export default function Footer() {
           <div>
             <Link
               href={`/${locale}`}
-              className="flex items-center space-x-2 text-white mb-6"
+              className="flex items-center space-x-2 mb-6"
             >
-              <Heart className="fill-brand-teal text-brand-teal" size={24} />
-              <span className="text-xl font-bold" style={{ fontFamily: 'cursive' }}>
-                {t('brand.name')}
-              </span>
+              <Image
+                src="/assets/logo_myside.png"
+                alt={t('brand.name')}
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               {t('footer.description')}
@@ -93,7 +97,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-brand-teal flex-shrink-0" />
-                <span>info@mysidecommunity.org</span>
+                <span>info@mysidespnesc.et</span>
               </li>
             </ul>
           </div>

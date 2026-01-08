@@ -13,7 +13,7 @@ import { locales, defaultLocale, type Locale } from '../lib/i18n';
 describe('Sitemap Completeness', () => {
   // Generate the sitemap entries
   const sitemapEntries = sitemap();
-  const baseUrl = 'https://mysidecommunity.org';
+  const baseUrl = 'https://mysidespnesc.et';
 
   /**
    * Property 5: Sitemap completeness

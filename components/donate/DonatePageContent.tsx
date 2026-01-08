@@ -43,26 +43,30 @@ export default function DonatePageContent() {
                 <h3 className="text-2xl font-bold text-brand-dark">{t('bankTransfer.title')}</h3>
               </div>
               
-              <div className="bg-white rounded-xl p-6 space-y-4">
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.bankName')}</span>
-                  <span className="text-gray-900">{bankInfo.bankName}</span>
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.accountName')}</span>
-                  <span className="text-gray-900">{bankInfo.accountName}</span>
-                </div>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-                  <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.accountNumber')}</span>
-                  <span className="text-gray-900 font-mono text-lg">{bankInfo.accountNumber}</span>
-                </div>
-                {bankInfo.note && (
-                  <div className="pt-4 mt-4 border-t border-gray-100">
-                    <p className="text-sm text-gray-500 italic">
-                      <span className="font-medium">Note:</span> {t('bankTransfer.note')}
-                    </p>
+              <div className="space-y-6">
+                {bankInfo.map((bank, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 space-y-4 border border-gray-100 shadow-sm">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                      <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.bankName')}</span>
+                      <span className="text-gray-900">{bank.bankName}</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                      <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.accountName')}</span>
+                      <span className="text-gray-900">{bank.accountName}</span>
+                    </div>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2">
+                      <span className="font-semibold text-gray-700 min-w-[140px]">{t('bankTransfer.accountNumber')}</span>
+                      <span className="text-gray-900 font-mono text-lg">{bank.accountNumber}</span>
+                    </div>
+                    {bank.note && (
+                      <div className="pt-4 mt-4 border-t border-gray-100">
+                        <p className="text-sm text-gray-500 italic">
+                          <span className="font-medium">Note:</span> {t('bankTransfer.note')}
+                        </p>
+                      </div>
+                    )}
                   </div>
-                )}
+                ))}
               </div>
             </div>
 

@@ -61,10 +61,10 @@ export default function ProgramsPageContent() {
   };
 
   const impactStats = [
-    { val: '70+', labelKey: 'childrenServed', icon: Users, color: 'bg-teal-500' },
+    { val: '30+', labelKey: 'childrenServed', icon: Users, color: 'bg-teal-500' },
     { val: '95%', labelKey: 'improvementRate', icon: Activity, color: 'bg-green-500' },
-    { val: '20+', labelKey: 'familiesSupported', icon: Home, color: 'bg-blue-500' },
-    { val: '8+', labelKey: 'professionalStaff', icon: UserCheck, color: 'bg-purple-500' },
+    { val: '30+', labelKey: 'familiesSupported', icon: Home, color: 'bg-blue-500' },
+    { val: '10+', labelKey: 'professionalStaff', icon: UserCheck, color: 'bg-purple-500' },
   ];
 
   return (

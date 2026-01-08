@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { locales, defaultLocale, type Locale } from './i18n';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mysidecommunity.org';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mysidespnesc.et';
 
 export interface PageMetadataOptions {
   title: string;
@@ -86,7 +86,7 @@ export function generatePageMetadata({
 }: PageMetadataOptions): Metadata {
   const url = getCanonicalUrl(path, locale);
 
-  const fullTitle = title === 'Home' 
+  const fullTitle = title === 'Home'
     ? 'Myside Community - Hope for Every Child'
     : `${title} | Myside Community`;
 

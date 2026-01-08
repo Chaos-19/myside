@@ -1,10 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Heart, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 export default function Header() {
@@ -43,7 +44,14 @@ export default function Header() {
             href={`/${locale}`}
             className="flex items-center space-x-2 text-brand-dark"
           >
-            <Heart className="fill-brand-teal text-brand-teal" size={24} />
+            <Image
+              src="/assets/logo_myside.png"
+              alt={t('brand.name')}
+              width={180}
+              height={180}
+              className="h-12 w-auto object-contain"
+              priority
+            />
             
             <span className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'cursive' }}>
               {t('brand.name')}

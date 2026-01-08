@@ -11,7 +11,7 @@ export const organizationInfo = {
   shortName: 'Myside Community',
   tagline: 'Building Hope for Every Child',
   taglineAm: '', // To be updated from Amharic documents
-  foundedYear: 2018,
+  foundedYear: 2024,
   yearsOfService: 7,
   description: 'To be a leading and comprehensive center of excellence in Ethiopia, where every child and community member with special needs is empowered, included, and equipped to lead a fulfilling and productive life.',
   descriptionAm: '', // To be updated from Amharic documents
@@ -33,42 +33,50 @@ export const organizationInfo = {
 // Contact Information
 export const contactInfo = {
   address: {
-    street: 'Bole Sub-City',
+    street: 'Akaki/Kality, Woreda 01',
     city: 'Addis Ababa',
     country: 'Ethiopia',
-    full: 'Myside Community Center, Bole Sub-City, Addis Ababa, Ethiopia',
+    full: 'Akaki/Kality, Woreda 01, Addis Ababa, Ethiopia',
   },
   phone: {
-    primary: '+251 911 123 456',
-    secondary: '+251 922 345 678',
+    primary: '+251911355321',
+    secondary: '+251911355321',
   },
   email: {
-    general: 'info@mysidecommunity.org',
-    donations: 'donate@mysidecommunity.org',
-    enrollment: 'enrollment@mysidecommunity.org',
+    general: 'info@mysidespnesc.et',
+    donations: 'donate@mysidespnesc.et',
+    enrollment: 'enrollment@mysidespnesc.et',
   },
   officeHours: {
     weekdays: '8:00 AM - 5:00 PM',
     saturday: '9:00 AM - 2:00 PM',
     sunday: 'Closed',
   },
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126766.39498828498!2d38.6894!3d8.9806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1703350000000!5m2!1sen!2sus',
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d9126.272238428055!2d38.785570015482506!3d8.874300032374904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAkaki%2FKality%2C%20Woreda%2001%2C%20Addis%20Ababa%2C%20Ethiopia!5e1!3m2!1sen!2set!4v1767852091992!5m2!1sen!2set" //'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126766.39498828498!2d38.6894!3d8.9806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1703350000000!5m2!1sen!2sus',
 };
 
 // Bank Information for Donations
-export const bankInfo = {
-  bankName: 'Commercial Bank of Ethiopia (CBE)',
-  accountName: 'Myside Community Charity Organization',
-  accountNumber: '1000XXXXXXXXXX',
-  note: 'Please contact us for the complete account details before making a transfer',
-};
+export const bankInfo = [
+  {
+    bankName: 'Dashen Bank',
+    accountName: 'Myside Community Charity Organization',
+    accountNumber: '5003525328011',
+    note: 'Please contact us for the complete account details before making a transfer',
+  },
+  {
+    bankName: 'Hibret Bank',
+    accountName: 'Myside Community Charity Organization',
+    accountNumber: '2020',
+    note: 'Please contact us for the complete account details before making a transfer',
+  }
+];
 
 // Statistics
 export const statistics = {
-  childrenSupported: '90+',
-  familiesHelped: '70+',
+  childrenSupported: '30+',
+  familiesHelped: '30+',
   corePrograms: '5+',
-  yearsOfService: '7',
+  yearsOfService: '2',
   successRate: '95%',
   directImpact: '100%',
 };
@@ -80,7 +88,7 @@ export const testimonials = [
     quote: 'I never thought my son would be able to attend school, but thanks to Myside Community, he is thriving in an inclusive classroom.',
     author: 'Helen B.',
     role: 'Parent',
-    img: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=200&auto=format&fit=crop',
+    img: 'https://source.unsplash.com/200x200/?person',
   },
   {
     quote: 'The therapy sessions have been a lifeline for us. The staff are so caring and professional. We finally feel supported.',

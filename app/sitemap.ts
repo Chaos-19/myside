@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { locales, defaultLocale } from '../lib/i18n';
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mysidecommunity.org';
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://mysidespnesc.et';
 
 // All page routes in the application
 const routes = [

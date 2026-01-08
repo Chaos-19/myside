@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 export default function Timeline() {
   const t = useTranslations('aboutPage.journey');
 
-  const timelineYears = ['2018', '2019', '2021', '2024'] as const;
+  const timelineYears = ['2024', '2025', '2026',] as const;
 
   return (
     <section className="py-20 bg-gray-50">

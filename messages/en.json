@@ -60,7 +60,7 @@
   },
   "aboutPage": {
     "title": "About Myside Community",
-    "subtitle": "Empowering children and youth with special needs in Ethiopia through compassionate care, innovative programs, and community support since 2018.",
+    "subtitle": "Empowering children and youth with special needs in Ethiopia through compassionate care, innovative programs, and community support since 2024.",
     "mission": {
       "title": "Mission",
       "description": "The main mission of Myside Special Needs Children/Community Charity Organization is to establish and operate a fully equipped educational and vocational training center. This center provides individualized academic programs, therapeutic support (such as speech therapy), and vocational skills development."
@@ -82,26 +82,22 @@
       "title": "Our Journey",
       "subtitle": "From humble beginnings to leading organization",
       "timeline": {
-        "2018": {
+        "2024": {
           "title": "Foundation",
           "description": "Myside Community was founded by a group of passionate educators in Addis Ababa."
         },
-        "2019": {
+        "2025": {
           "title": "First Programs",
           "description": "Launched our first educational support programs for children with autism."
         },
-        "2021": {
+        "2026": {
           "title": "Family Support",
           "description": "Introduced comprehensive family support and parent training workshops."
-        },
-        "2024": {
-          "title": "Expansion",
-          "description": "Opened new centers in three additional cities, serving over 500 children."
         }
       }
     },
     "team": {
-      "title": "Meet Our Board Members",
+      "title": "Meet Our Volunteers",
       "joinTeam": {
         "title": "Join Our Team",
         "description": "We're always looking for passionate professionals who share our commitment to supporting children with special needs."
@@ -335,7 +331,7 @@
       },
       "yearsOfService": {
         "title": "Years of Service",
-        "subtitle": "Supporting our community since 2018"
+        "subtitle": "Supporting our community since 2024"
       },
       "corePrograms": {
         "title": "Core Programs",

@@ -11,9 +11,9 @@ export const boardMembers: BoardMember[] = [
     id: "henok-tenkir-fuji",
     name: "Henok Tenkir Fuji",
     role: "Founder/Board Chair Person",
-    photo: "", // No photo file available
+    photo: "/assets/Members Photo/Henok Tenkir Fuji.jpg", // No photo file available
     degree: "BSc in Civil Engineering",
-    order: 1,
+    order: 3,
   },
   {
     id: "tesfaye-hailu-tesfaye",
@@ -21,7 +21,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Assistant Board Chair Person",
     photo: "/assets/Members Photo/Tesfaye Hailu Tesfaye.jpg",
     degree: "BSc in Pharmacy",
-    order: 2,
+    order: 4,
   },
   {
     id: "assefu-teshome-woldehawarit",
@@ -29,7 +29,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Secretary",
     photo: "/assets/Members Photo/Assefu Teshome Woldehawarit.jpg",
     degree: "BSc in Business Management",
-    order: 3,
+    order: 5,
   },
   {
     id: "fikrte-hailu-gwelde",
@@ -37,7 +37,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Fikrte Hailu  GWelde.jpg", // Note: double space in filename
     degree: "Diploma in Secretarial Science",
-    order: 4,
+    order: 6,
   },
   {
     id: "tigist-tilahun-tenange",
@@ -45,7 +45,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Tigist Tilahun Tenange.jpg",
     degree: "Level-IV in ICT",
-    order: 5,
+    order: 7,
   },
   {
     id: "sofia-oumer-kedir",
@@ -53,7 +53,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Sofia Oumer Kedir.jpg",
     degree: "BSc in Accounting and Finance",
-    order: 6,
+    order: 9,
   },
   {
     id: "bezawit-tilaye-tiruneh",
@@ -61,7 +61,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Bezawit Tilaye Tiruneh.jpg",
     degree: "BSc in Psychology",
-    order: 7,
+    order: 8,
   },
   {
     id: "dr-robel-wasihun-gebremedhin",
@@ -70,7 +70,7 @@ export const boardMembers: BoardMember[] = [
     role: "Volunteer Board Member",
     photo: "/assets/Members Photo/Dr Robel Wasihun Gebremedhin.jpg",
     degree: "Doctor of Medicine",
-    order: 8,
+    order: 1,
   },
   {
     id: "konget-moges-ketema",
@@ -78,7 +78,7 @@ export const boardMembers: BoardMember[] = [
     role: "Volunteer Board Member",
     photo: "/assets/Members Photo/Konget Moges ketema.jpg", // Note: lowercase 'k' in ketema
     degree: "MSc in Special Needs",
-    order: 9,
+    order: 2,
   },
   {
     id: "solomon-eshete-kassaye",
@@ -86,6 +86,14 @@ export const boardMembers: BoardMember[] = [
     role: "Company Manager",
     photo: "/assets/Members Photo/Solomon Eshete kassaye.jpg", // Note: lowercase 'k' in kassaye
     degree: "BSc in Accounting",
+    order: 10,
+  },
+  {
+    id: "mart-deneke-birre",
+    name: "Marta Deneke Birre",
+    role: "Casher",
+    photo: "/assets/Members Photo/Marta Deneke Birre.jpg", // Note: lowercase 'k' in kassaye
+    degree: "BSC in Pharmacy",
     order: 10,
   },
 ];
