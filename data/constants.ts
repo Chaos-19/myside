@@ -52,7 +52,7 @@ export const contactInfo = {
     saturday: '9:00 AM - 2:00 PM',
     sunday: 'Closed',
   },
-  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d9126.272238428055!2d38.785570015482506!3d8.874300032374904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAkaki%2FKality%2C%20Woreda%2001%2C%20Addis%20Ababa%2C%20Ethiopia!5e1!3m2!1sen!2set!4v1767852091992!5m2!1sen!2set" //'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126766.39498828498!2d38.6894!3d8.9806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85cef5ab402d%3A0x8467b6b037a24d49!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1703350000000!5m2!1sen!2sus',
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5364.50422895976!2d38.790814596137444!3d8.867121133370745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNTEnNTkuNiJOIDM4wrA0NycyNy43IkU!5e1!3m2!1sen!2set!4v1767964220752!5m2!1sen!2set",
 };
 
 // Bank Information for Donations

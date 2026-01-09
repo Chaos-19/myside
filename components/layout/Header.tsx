@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -74,7 +74,9 @@ export default function Header() {
               </Link>
             ))}
             
-            <LanguageSwitcher />
+            <Suspense fallback={<div className="w-20" />}>
+              <LanguageSwitcher />
+            </Suspense>
             
             <Link
               href={`/${locale}/donate`}
@@ -86,7 +88,9 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-4">
-            <LanguageSwitcher />
+            <Suspense fallback={<div className="w-20" />}>
+              <LanguageSwitcher />
+            </Suspense>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600"
