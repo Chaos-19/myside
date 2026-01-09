@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState, Suspense } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
@@ -12,11 +12,10 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations();
   const pathname = usePathname();
-
-  // Extract locale from pathname
-  const locale = pathname.split('/').includes('am') ? 'am' : 'en';
+  const locale = useLocale();
   
   // Get current page from pathname (without locale)
+  // Note: usePathname from next/navigation includes the locale prefix
   const currentPath = pathname.replace(`/${locale}`, '') || '/';
 
   const navLinks = [
