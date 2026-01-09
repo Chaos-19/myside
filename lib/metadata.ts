@@ -87,7 +87,7 @@ export function generatePageMetadata({
   const url = getCanonicalUrl(path, locale);
 
   const fullTitle = title === 'Home'
-    ? 'Myside Community - Hope for Every Child'
+    ? 'Myside Community Charity Organization - Building Hope for Every Child'
     : `${title} | Myside Community`;
 
   return {
@@ -106,7 +106,7 @@ export function generatePageMetadata({
       title: fullTitle,
       description,
       url,
-      siteName: 'Myside Community',
+      siteName: 'Myside Community Charity Organization',
       images: [generateOgImage({ title, ogImage } as OpenGraphImageOptions & { ogImage: string })],
       locale: getOgLocale(locale),
       type: 'website',
@@ -135,9 +135,28 @@ export function generatePageMetadata({
  * Default metadata for pages without specific configuration
  */
 export const defaultMetadata: Metadata = {
-  title: 'Myside Community - Hope for Every Child',
-  description: 'Supporting children and youth with special needs in Ethiopia through education, healthcare, and community support programs.',
-  keywords: ['charity', 'Ethiopia', 'special needs', 'children', 'nonprofit', 'community'],
+  title: 'Myside Community Charity Organization - Building Hope for Every Child',
+  description: 'Myside Community Charity Organization is a non-profit dedicated to empowering children and youth with special needs in Ethiopia through education, therapy, and community support.',
+  keywords: [
+    'Myside Community',
+    'Charity Organization',
+    'Ethiopia',
+    'Addis Ababa',
+    'Special Needs',
+    'Disability Support',
+    'Autism',
+    'Down Syndrome',
+    'ADHD',
+    'Cerebral Palsy',
+    'Sensory Processing Disorder',
+    'Developmental Coordination Disorder',
+    'Obsessive Compulsive Disorder',
+    'Inclusive Education',
+    'Vocational Training',
+    'Therapy Center',
+    'Non-profit',
+    'NGO'
+  ],
 };
 
 /**
@@ -146,37 +165,42 @@ export const defaultMetadata: Metadata = {
 export const pageMetadataConfig: Record<string, Omit<PageMetadataOptions, 'locale' | 'path'>> = {
   home: {
     title: 'Home',
-    description: 'Myside Community - Building hope for every child. Supporting children and youth with special needs in Ethiopia.',
-    keywords: ['home', 'nonprofit', 'community support'],
+    description: 'Myside Community Charity Organization - Building hope for every child. We provide specialized education, therapy, and vocational training for children and youth with special needs in Ethiopia.',
+    keywords: ['home', 'charity', 'special needs support', 'Ethiopia charity', 'inclusive community'],
   },
   about: {
     title: 'About Us',
-    description: 'Learn about Myside Community\'s mission, vision, and the dedicated team working to support special needs children in Ethiopia.',
-    keywords: ['about', 'mission', 'vision', 'team', 'board members'],
+    description: 'Learn about Myside Community\'s mission to establish a center of excellence for special needs. Meet our dedicated team and board members working to empower children in Ethiopia.',
+    keywords: ['about us', 'mission', 'vision', 'team', 'board members', 'history', 'organization goals'],
   },
   programs: {
     title: 'Our Programs',
-    description: 'Discover our programs supporting children with special needs through education, healthcare, and community integration.',
-    keywords: ['programs', 'education', 'healthcare', 'support'],
+    description: 'Discover our comprehensive programs: Educational Support, Therapeutic Services, Family Support, Vocational Training, and Community Outreach for children with special needs.',
+    keywords: ['programs', 'special education', 'speech therapy', 'occupational therapy', 'family counseling', 'vocational skills'],
   },
   gallery: {
     title: 'Gallery',
-    description: 'View photos and moments from Myside Community\'s activities and events supporting special needs children.',
-    keywords: ['gallery', 'photos', 'events', 'activities'],
+    description: 'Explore our gallery showcasing the impact of our work, community events, and the smiles of the children we support at Myside Community Charity Organization.',
+    keywords: ['gallery', 'photos', 'events', 'community activities', 'impact'],
   },
   contact: {
     title: 'Contact Us',
-    description: 'Get in touch with Myside Community. We\'d love to hear from you and answer any questions.',
-    keywords: ['contact', 'reach us', 'location', 'email'],
+    description: 'Get in touch with Myside Community Charity Organization in Addis Ababa. Contact us for enrollment, donations, or general inquiries.',
+    keywords: ['contact', 'address', 'phone number', 'email', 'location', 'Addis Ababa', 'Akaki Kality'],
   },
   'get-involved': {
     title: 'Get Involved',
-    description: 'Join Myside Community as a volunteer or partner. Make a difference in the lives of special needs children.',
-    keywords: ['volunteer', 'partner', 'get involved', 'join'],
+    description: 'Join us in making a difference. Volunteer your time, partner with us, or support our mission to help children with special needs reach their full potential.',
+    keywords: ['volunteer', 'get involved', 'partnership', 'support us', 'community service'],
   },
   donate: {
-    title: 'Support Our Mission',
-    description: 'Support Myside Community through bank transfer donations. Your contribution helps children with special needs.',
-    keywords: ['donate', 'support', 'bank transfer', 'contribution'],
+    title: 'Donate',
+    description: 'Your donation transforms lives. Support Myside Community Charity Organization to provide education and therapy for children with special needs in Ethiopia.',
+    keywords: ['donate', 'give', 'support charity', 'donation', 'bank transfer', 'help children'],
+  },
+  'dashboard': {
+    title: 'Dashboard',
+    description: 'Myside Community Admin Dashboard for managing events, applications, and gallery.',
+    keywords: ['admin', 'dashboard', 'management'],
   },
 };
