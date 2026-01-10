@@ -156,6 +156,7 @@ export const socialLinks = {
   twitter: 'https://twitter.com/mysidecommunity',
   linkedin: 'https://linkedin.com/company/mysidecommunity',
   youtube: 'https://youtube.com/@mysidecommunity',
+  telegram: 'https://t.me/+0m08mjzg5lRmOTJk'
 };
 
 // Hero Content

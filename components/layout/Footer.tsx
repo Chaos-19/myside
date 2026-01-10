@@ -4,7 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react';
 import { socialLinks, contactInfo } from '@/data';
 
 export default function Footer() {
@@ -24,9 +24,10 @@ export default function Footer() {
 
   const socialIcons = [
     { Icon: Facebook, href: socialLinks.facebook, label: 'Facebook' },
-    { Icon: Twitter, href: socialLinks.twitter, label: 'Twitter' },
+    //{ Icon: Twitter, href: socialLinks.twitter, label: 'Twitter' },
     { Icon: Instagram, href: socialLinks.instagram, label: 'Instagram' },
-    { Icon: Linkedin, href: socialLinks.linkedin, label: 'LinkedIn' },
+    //{ Icon: Linkedin, href: socialLinks.linkedin, label: 'LinkedIn' },
+    { Icon: Send, href: socialLinks.telegram, label: 'Telegram' },
   ];
 
   return (
