@@ -1,6 +1,6 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -9,10 +9,10 @@ import { socialLinks, contactInfo } from '@/data';
 
 export default function Footer() {
   const t = useTranslations();
-  const pathname = usePathname();
+
   
   // Extract locale from pathname
-  const locale = pathname.split('/')[1] || 'en';
+  const locale = useLocale()
 
   const quickLinks = [
     { label: t('nav.about'), href: `/${locale}/about` },
