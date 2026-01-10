@@ -246,12 +246,12 @@ export default function GetInvolvedPageContent() {
               <h3 className="text-xl font-bold text-brand-dark mb-6">{t('partnership.currentPartners.title')}</h3>
               <p className="text-gray-600 text-sm mb-6">{t('partnership.currentPartners.subtitle')}</p>
               <div className="grid grid-cols-2 gap-4 text-sm font-medium text-gray-500">
-                <div>{t('partnership.currentPartners.partners.ministry')}</div>
-                <div>{t('partnership.currentPartners.partners.university')}</div>
-                <div>{t('partnership.currentPartners.partners.clinics')}</div>
-                <div>{t('partnership.currentPartners.partners.ngos')}</div>
-                <div>{t('partnership.currentPartners.partners.community')}</div>
-                <div>{t('partnership.currentPartners.partners.corporate')}</div>
+
+                <div>{t('partnership.currentPartners.partners.partner1')}</div>
+                <div>{t('partnership.currentPartners.partners.partner2')}</div>
+                <div>{t('partnership.currentPartners.partners.partner3')}</div>
+                <div>{t('partnership.currentPartners.partners.partner4')}</div>
+                <div>{t('partnership.currentPartners.partners.partner5')}</div>
               </div>
             </div>
             <div className="flex-1 bg-white p-8 rounded-xl border border-gray-100 shadow-sm">

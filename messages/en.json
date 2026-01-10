@@ -488,12 +488,11 @@
         "title": "Our Current Partners",
         "subtitle": "We're proud to work with these organizations to expand our reach and impact:",
         "partners": {
-          "ministry": "Ethiopian Ministry of Health",
-          "university": "Addis Ababa University",
-          "clinics": "Local Healthcare Clinics",
-          "ngos": "International NGOs",
-          "community": "Community Organizations",
-          "corporate": "Corporate Sponsors"
+          "partner1": "Addis Ababa City Administration Education Bureau",
+          "partner2": "F.D.R.E Authority for Civil Society Organizations",
+          "partner3": "Addis Ababa City Administration Health Bureau",
+          "partner4": "Ministry of Health Ethiopia",
+          "partner5": "Ministry of Education Ethiopia"
         }
       },
       "becomePartner": {

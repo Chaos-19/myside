@@ -151,8 +151,8 @@ export const aboutStats = [
 
 // Social Media Links
 export const socialLinks = {
-  facebook: 'https://facebook.com/mysidecommunity',
-  instagram: 'https://instagram.com/mysidecommunity',
+  facebook: 'https://www.facebook.com/profile.php?id=61586003655458',
+  instagram: 'https://www.instagram.com/p/DTUu7RWjPQR/?igsh=MXVxemF5bmFxb21jOQ==',
   twitter: 'https://twitter.com/mysidecommunity',
   linkedin: 'https://linkedin.com/company/mysidecommunity',
   youtube: 'https://youtube.com/@mysidecommunity',
