@@ -59,7 +59,7 @@ export default function MissionVision() {
               className="rounded-2xl shadow-xl w-full object-cover h-full min-h-[400px]"
             />
             <div className="absolute -bottom-8 -left-6 bg-brand-teal text-white p-6 rounded-xl shadow-lg hidden lg:block">
-              <div className="text-4xl font-bold">500+</div>
+              <div className="text-4xl font-bold">30+</div>
               <div className="text-sm opacity-90">{tAbout('stats.childrenSupported')}</div>
             </div>
           </div>

@@ -89,15 +89,15 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start space-x-3">
                 <MapPin size={18} className="text-brand-teal flex-shrink-0 mt-0.5" />
-                <span>Bole Sub-City, Addis Ababa, Ethiopia</span>
+                <span>{contactInfo.address.full}</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={18} className="text-brand-teal flex-shrink-0" />
-                <span>+251 911 123 456</span>
+                <span>{contactInfo.phone.primary}</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={18} className="text-brand-teal flex-shrink-0" />
-                <span>info@mysidespnesc.et</span>
+                <span>{contactInfo.email.general}</span>
               </li>
             </ul>
           </div>
