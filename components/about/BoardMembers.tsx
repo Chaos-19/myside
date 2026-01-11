@@ -29,20 +29,18 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
 
   return (
     <div className="group">
-      <div className="w-60 h-60 mx-auto mb-6 rounded-full border-4 border-gray-50 shadow-lg group-hover:border-brand-teal transition-colors relative p-1 bg-white">
-        <div className="relative w-full h-full rounded-full overflow-hidden">
-          {imageError ? (
-            <PlaceholderAvatar name={member.name} />
-          ) : (
-            <Image 
-              src={member.photo} 
-              alt={member.name} 
-              fill
-              className=""
-              onError={() => setImageError(true)}
-            />
-          )}
-        </div>
+     <div className="w-60 h-60 mx-auto mb-6 rounded-full overflow-hidden border-4 border-gray-50 shadow-lg group-hover:border-brand-teal transition-colors relative">
+        {imageError ? (
+          <PlaceholderAvatar name={member.name} />
+        ) : (
+          <Image 
+            src={member.photo} 
+            alt={member.name} 
+            fill
+            className="scale-120"
+            onError={() => setImageError(true)}
+          />
+        )}
       </div>
       <h3 className="text-xl font-bold text-gray-900">
         {formatDisplayName(member.name, member.title)}
