@@ -38,7 +38,7 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
               src={member.photo} 
               alt={member.name} 
               fill
-              className="object-cover"
+              className=""
               onError={() => setImageError(true)}
             />
           )}
