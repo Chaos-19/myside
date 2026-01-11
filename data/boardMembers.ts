@@ -13,6 +13,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Chair Person",
     photo: "/assets/Members Photo/Henok Tenkir Fuji.jpg", // No photo file available
     degree: "BSc in Civil Engineering",
+    email: "henok.fuji@mysidespnesc.et",
     order: 3,
   },
   {
@@ -21,6 +22,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Assistant Board Chair Person",
     photo: "/assets/Members Photo/Tesfaye Hailu Tesfaye.jpg",
     degree: "BSc in Pharmacy",
+    email: "tesfaye.hailu@mysidespnesc.et",
     order: 4,
   },
   {
@@ -29,6 +31,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Secretary",
     photo: "/assets/Members Photo/Assefu Teshome Woldehawarit.jpg",
     degree: "BSc in Business Management",
+    email: "assefu.woldehawarit@mysidespnesc.et",
     order: 5,
   },
   {
@@ -37,6 +40,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Fikrte Hailu  GWelde.jpg", // Note: double space in filename
     degree: "Diploma in Secretarial Science",
+    email: "fikrte.gwelde@mysidespnesc.et",
     order: 6,
   },
   {
@@ -45,6 +49,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Tigist Tilahun Tenange.jpg",
     degree: "Level-IV in ICT",
+    email: "tigist.tenange@mysidespnesc.et",
     order: 7,
   },
   {
@@ -53,6 +58,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Sofia Oumer Kedir.jpg",
     degree: "BSc in Accounting and Finance",
+    email: "sofia.kedir@mysidespnesc.et",
     order: 9,
   },
   {
@@ -61,6 +67,7 @@ export const boardMembers: BoardMember[] = [
     role: "Founder/Board Member",
     photo: "/assets/Members Photo/Bezawit Tilaye Tiruneh.jpg",
     degree: "BSc in Psychology",
+    email: "bezawit.tiruneh@mysidespnesc.et",
     order: 8,
   },
   {
@@ -70,6 +77,7 @@ export const boardMembers: BoardMember[] = [
     role: "Volunteer Board Member",
     photo: "/assets/Members Photo/Dr Robel Wasihun Gebremedhin.jpg",
     degree: "Doctor of Medicine",
+    email: "robel.gebremedhin@mysidespnesc.et",
     order: 1,
   },
   {
@@ -78,6 +86,7 @@ export const boardMembers: BoardMember[] = [
     role: "Volunteer Board Member",
     photo: "/assets/Members Photo/Konget Moges ketema.jpg", // Note: lowercase 'k' in ketema
     degree: "MSc in Special Needs",
+    email: "konget.ketema@mysidespnesc.et",
     order: 2,
   },
   {
@@ -86,6 +95,7 @@ export const boardMembers: BoardMember[] = [
     role: "Company Manager",
     photo: "/assets/Members Photo/Solomon Eshete kassaye.jpg", // Note: lowercase 'k' in kassaye
     degree: "BSc in Accounting",
+    email: "solomon.kassaye@mysidespnesc.et",
     order: 10,
   },
   {
@@ -94,6 +104,7 @@ export const boardMembers: BoardMember[] = [
     role: "Casher",
     photo: "/assets/Members Photo/Marta Deneke Birre.jpg", // Note: lowercase 'k' in kassaye
     degree: "BSC in Pharmacy",
+    email: "marta.birre@mysidespnesc.et",
     order: 10,
   },
 ];

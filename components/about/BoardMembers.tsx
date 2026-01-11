@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { Mail } from 'lucide-react';
 import { boardMembers } from '@/data/boardMembers';
 import { getInitials, formatDisplayName, shouldDisplayDegree } from '@/lib/boardMemberUtils';
 import type { BoardMember } from '@/types';
@@ -37,7 +38,7 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
               src={member.photo} 
               alt={member.name} 
               fill
-              className="object-"
+              className="object-cover"
               onError={() => setImageError(true)}
             />
           )}
@@ -49,6 +50,14 @@ function BoardMemberCard({ member }: { member: BoardMember }) {
       <p className="text-brand-teal font-medium">{member.role}</p>
       {displayDegree && (
         <p className="text-gray-600 text-sm">{displayDegree}</p>
+      )}
+      {member.email && (
+        <div className="flex items-center justify-center space-x-2 mt-2 text-gray-500 hover:text-brand-teal transition-colors">
+          <Mail size={14} />
+          <a href={`mailto:${member.email}`} className="text-sm truncate max-w-[200px]">
+            {member.email}
+          </a>
+        </div>
       )}
       {member.bio && (
         <p className="text-gray-500 text-sm mt-2">{member.bio}</p>

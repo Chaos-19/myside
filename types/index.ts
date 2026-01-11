@@ -22,6 +22,7 @@ export interface BoardMember {
   order: number;
   title?: string;   // Professional designation (e.g., "Dr.", "Prof.")
   degree?: string;  // Educational credentials (e.g., "PhD in Medicine")
+  email?: string;   // Professional email address
 }
 
 // Gallery Types
