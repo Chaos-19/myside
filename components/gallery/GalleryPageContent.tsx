@@ -104,7 +104,7 @@ export default function GalleryPageContent() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                   {img.category && (
                     <span className="text-brand-teal text-xs font-bold uppercase tracking-wider mb-2 bg-white/90 inline-block px-2 py-1 rounded w-fit">
                       {img.category}
@@ -133,25 +133,27 @@ export default function GalleryPageContent() {
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
-          <button 
-            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
-            onClick={() => setSelectedImage(null)}
-            aria-label="Close lightbox"
-          >
-            <X size={32} />
-          </button>
           <div 
-            className="relative max-w-full max-h-[90vh] w-full h-full"
-            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-full max-h-[90vh] w-full h-full pointer-events-none"
           >
             <Image 
               src={selectedImage} 
               alt="Gallery image enlarged view"
               fill
-              className="object-contain"
+              className="object-contain pointer-events-auto"
               sizes="100vw"
             />
           </div>
+          <button 
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-50 bg-black/50 rounded-full p-1"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+            aria-label="Close lightbox"
+          >
+            <X size={32} />
+          </button>
         </div>
       )}
     </div>

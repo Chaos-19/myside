@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { 
@@ -16,8 +16,7 @@ import { contactInfo } from '@/data';
 export default function GetInvolvedPageContent() {
   const t = useTranslations('getInvolved');
   const tCommon = useTranslations('common');
-  const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
+  const locale = useLocale()
   
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
